@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { TodoItem } from '../../models/todo-item';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'todo-list',
-  imports: [FormsModule],
+  imports: [FormsModule, NgFor],
   templateUrl: './todo-list.component.html',
   styleUrl: './todo-list.component.css'
 })
@@ -25,7 +26,7 @@ export class TodoListComponent {
 
       this.items.push(newItem);
     }
-    
+
     this.newTask = '';
   }
 

@@ -1,6 +1,15 @@
 <div class="todo-list">
-  <div class="new-task-div">
+  <div class="add-task-container">
     <input [(ngModel)]="newTask" placeholder="Add new task">
     <button (click)="addTask()">Add</button>
+  </div>
+  <div class="task-list-container">
+    <ul>
+      <li *ngFor="let todoItem of items">
+        <input type="checkbox"/>
+        <span>{{todoItem.content}}</span>
+        <button>Delete</button>
+      </li>
+    </ul>
   </div>
 </div>
