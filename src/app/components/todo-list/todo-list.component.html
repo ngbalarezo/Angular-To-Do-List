@@ -1,1 +1,6 @@
-<p>todo-list works!</p>
+<div class="todo-list">
+  <div class="new-task-div">
+    <input [(ngModel)]="newTask" placeholder="Add new task">
+    <button (click)="addTask()">Add</button>
+  </div>
+</div>
