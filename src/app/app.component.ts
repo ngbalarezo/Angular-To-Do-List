@@ -9,5 +9,5 @@ import { TodoListComponent } from "./components/todo-list/todo-list.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'p1-event-driven-paradigm';
+  
 }
