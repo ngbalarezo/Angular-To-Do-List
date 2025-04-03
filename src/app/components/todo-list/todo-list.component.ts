@@ -35,4 +35,9 @@ export class TodoListComponent {
     this.items[index].completed = !this.items[index].completed;
   }
 
+  // method sets the array to an array where the item with the proper id is filtered out 
+  deleteTask(id: string): void {
+    this.items = this.items.filter(item => item.id !== id);
+  }
+
 }

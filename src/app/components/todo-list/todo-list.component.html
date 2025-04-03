@@ -11,7 +11,7 @@
           (change)="toggleCompleted(i)"
         />
         <span>{{todoItem.content}}</span>
-        <button>Delete</button>
+        <button (click)="deleteTask(todoItem.id)">Delete</button>
       </li>
     </ul>
   </div>
