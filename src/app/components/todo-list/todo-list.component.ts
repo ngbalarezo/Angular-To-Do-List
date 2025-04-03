@@ -30,4 +30,9 @@ export class TodoListComponent {
     this.newTask = '';
   }
 
+  // method toggles completed status if checkbox is activated
+  toggleCompleted(index: number): void {
+    this.items[index].completed = !this.items[index].completed;
+  }
+
 }
