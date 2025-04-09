@@ -5,12 +5,14 @@
   </div>
   <div class="task-list-container">
     <ul>
-      <li *ngFor="let todoItem of items; let i = index;">
+      <li *ngFor="let todoItem of items; let i = index;" [ngClass]="{'completed':todoItem.completed}">
         <input 
+          class="task-checkbox"
           type="checkbox"
+          [(checked)] ="todoItem.completed"
           (change)="toggleCompleted(i)"
         />
-        <span>{{todoItem.content}}</span>
+        <span [class.completed]="todoItem.completed">{{todoItem.content}}</span>
         <button (click)="deleteTask(todoItem.id)">Delete</button>
       </li>
     </ul>
