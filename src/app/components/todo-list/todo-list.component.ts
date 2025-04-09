@@ -33,7 +33,7 @@ export class TodoListComponent {
   // method toggles completed status if checkbox is activated
   toggleCompleted(index: number): void {
     if (this.items[index].completed === false) {
-      let completionSound = new Audio('/audio/youve-got-mail-sound.mp3');
+      let completionSound = new Audio('/audio/clapping-audience.mp3');
       completionSound.play();
     }
     
