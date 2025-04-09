@@ -32,11 +32,19 @@ export class TodoListComponent {
 
   // method toggles completed status if checkbox is activated
   toggleCompleted(index: number): void {
+    if (this.items[index].completed === false) {
+      let completionSound = new Audio('/audio/youve-got-mail-sound.mp3');
+      completionSound.play();
+    }
+    
     this.items[index].completed = !this.items[index].completed;
   }
 
   // method sets the array to an array where the item with the proper id is filtered out 
   deleteTask(id: string): void {
+    let deletionSound = new Audio('/audio/Loud-pop-sound-effect.mp3');
+    deletionSound.play();
+    
     this.items = this.items.filter(item => item.id !== id);
   }
 
